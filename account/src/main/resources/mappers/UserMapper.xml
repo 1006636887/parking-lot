@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.account.mapper.UserMapper">
+  <resultMap id="UserBaseMap" type="com.qf.account.domain.entity.User">
+    <result column="uid" jdbcType="INTEGER" property="uid" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="user_password" jdbcType="VARCHAR" property="userPassword" />
+    <result column="create_date" jdbcType="TIMESTAMP" property="createDate" />
+    <result column="user_phone" jdbcType="VARCHAR" property="userPhone" />
+    <result column="is_delete" jdbcType="INTEGER" property="isDelete" />
+    <result column="salt" property="salt"/>
+  </resultMap>
+
+  <insert id="insert" >
+    insert into t_user ( user_name, user_password, user_phone,salt)
+                values (#{user.userName}, #{user.userPassword}, #{user.userPhone},#{user.salt})
+  </insert>
+  <select id="login" resultMap="UserBaseMap">
+    select user_name
+    from t_user
+    where is_delete = 0 and user_name = #{userName} and user_password = #{userPassword}
+  </select>
+
+  <select id="loginCheck" resultMap="UserBaseMap">
+    select user_name,user_password,salt
+    from t_user
+    where is_delete =0 and user_name = #{userName}
+  </select>
+
+</mapper>

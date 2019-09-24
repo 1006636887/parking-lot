@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MyBatisCodeHelperDatasource">
+    <option name="projectProfile">
+      <ProjectProfile>
+        <option name="javaMapperPackage" value="com.qf.account.mapper" />
+        <option name="javaMapperPath" value="$PROJECT_DIR$/account/src/main/java" />
+        <option name="javaModelPackage" value="com.qf.account.domain.entity" />
+        <option name="javaModelPath" value="$PROJECT_DIR$/account/src/main/java" />
+        <option name="lastDatabaseCrudChooseModuleName" value="account" />
+        <option name="moduleNameToPackageAndPathMap">
+          <map>
+            <entry key="account">
+              <value>
+                <UserPackageAndPathInfoByModule>
+                  <option name="javaMapperPackage" value="com.qf.account.mapper" />
+                  <option name="javaMapperPath" value="$PROJECT_DIR$/account/src/main/java" />
+                  <option name="javaModelPacakge" value="com.qf.account.domain.entity" />
+                  <option name="javaModelPath" value="$PROJECT_DIR$/account/src/main/java" />
+                  <option name="xmlPackage" value="mappers" />
+                  <option name="xmlPath" value="$PROJECT_DIR$/account/src/main/resources" />
+                </UserPackageAndPathInfoByModule>
+              </value>
+            </entry>
+          </map>
+        </option>
+        <option name="tableGenerateConfigs">
+          <map>
+            <entry key="parking_lot:parking_lot_user">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="ParkingLotUser" />
+                  <option name="moduleName" value="account" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="parking_lot:t_user">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="TUser" />
+                  <option name="moduleName" value="account" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+          </map>
+        </option>
+        <option name="useLomBokOnModel" value="true" />
+        <option name="xmlMapperPackage" value="mappers" />
+        <option name="xmlMapperPath" value="$PROJECT_DIR$/account/src/main/resources" />
+      </ProjectProfile>
+    </option>
+  </component>
+</project>
